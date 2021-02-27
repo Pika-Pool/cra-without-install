@@ -1,0 +1,16 @@
+{
+	"name": "pnpm-cra",
+	"version": "0.0.1",
+	"description": "",
+	"main": "pnpm-cra.json",
+	"scripts": {
+		"start": "node pnpm-cra.js"
+	},
+	"pkg": {
+		"scripts": "*.js",
+		"assets": "files/**/*"
+	},
+	"keywords": [],
+	"author": "PikaPool <https://www.github.com/Pika-Pool>",
+	"license": "MIT"
+}
