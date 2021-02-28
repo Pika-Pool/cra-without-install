@@ -4,13 +4,13 @@ module.exports = ({ writeFileIfExists, filesToCopyFromPath }) => {
 	// create index.js file
 	writeFileIfExists({
 		path: 'src/index.tsx',
-		source: path.join(filesToCopyFromPath, 'index.tsx'),
+		source: path.join(filesToCopyFromPath, 'ts/index.tsx'),
 	});
 
 	// create App.js
 	writeFileIfExists({
 		path: 'src/App.tsx',
-		source: path.join(filesToCopyFromPath, 'App.tsx'),
+		source: path.join(filesToCopyFromPath, 'ts/App.tsx'),
 	});
 
 	// create index.css file
@@ -19,7 +19,7 @@ module.exports = ({ writeFileIfExists, filesToCopyFromPath }) => {
 	// create tsconfig.json file
 	writeFileIfExists({
 		path: 'tsconfig.json',
-		source: path.join(filesToCopyFromPath, 'tsconfig.json'),
+		source: path.join(filesToCopyFromPath, 'ts/tsconfig.json'),
 	});
 
 	// pnpm command
