@@ -58,6 +58,14 @@ writeFileIfExists({
 
 // =======================================================================================
 
+// create .env file
+writeFileIfExists({
+	path: '.env',
+	data: 'BROWSER=none',
+});
+
+// =======================================================================================
+
 // create index.html
 writeFileIfExists({
 	path: 'public/index.html',
