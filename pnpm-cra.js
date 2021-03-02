@@ -98,7 +98,9 @@ function createFolder(path) {
 function writeFileIfExists({ path, data, source }) {
 	if (!fs.existsSync(path)) {
 		if (source) {
-			fs.createReadStream(source).pipe(fs.createWriteStream(path));
+			// asynchronous method
+			// fs.createReadStream(source).pipe(fs.createWriteStream(path));
+			fs.copyFileSync(source, path);
 		} else if (typeof data === 'string') {
 			fs.writeFileSync(path, data);
 		} else {
