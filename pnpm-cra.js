@@ -73,7 +73,10 @@ writeFileIfExists({
 });
 
 // create index.css file
-writeFileIfExists({ path: 'src/index.css', data: '' });
+writeFileIfExists({
+	path: 'src/index.css',
+	source: path.join(filesToCopyFromPath, 'index.css'),
+});
 
 // =======================================================================================
 
