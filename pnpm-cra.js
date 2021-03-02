@@ -72,6 +72,9 @@ writeFileIfExists({
 	source: path.join(filesToCopyFromPath, 'index.html'),
 });
 
+// create index.css file
+writeFileIfExists({ path: 'src/index.css', data: '' });
+
 // =======================================================================================
 
 // language specific actions

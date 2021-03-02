@@ -13,9 +13,6 @@ module.exports = ({ writeFileIfExists, filesToCopyFromPath }) => {
 		source: path.join(filesToCopyFromPath, 'js/App.js'),
 	});
 
-	// create index.css file
-	writeFileIfExists({ path: 'src/index.css', data: '' });
-
 	// pnpm command
 	console.log('The pnpm command\n');
 	console.log('\tpnpm add react react-dom react-scripts');

@@ -11,10 +11,7 @@ module.exports = ({ writeFileIfExists, filesToCopyFromPath }) => {
 	writeFileIfExists({
 		path: 'src/App.tsx',
 		source: path.join(filesToCopyFromPath, 'ts/App.tsx'),
-	});
-
-	// create index.css file
-	writeFileIfExists({ path: 'src/index.css', data: '' });
+	})
 
 	// create tsconfig.json file
 	writeFileIfExists({
