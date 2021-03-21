@@ -119,7 +119,12 @@ function writeFileIfExists({ path, data, source }) {
 		if (source) {
 			// asynchronous method
 			// fs.createReadStream(source).pipe(fs.createWriteStream(path));
-			fs.copyFileSync(source, path);
+
+			// copyFileSync not working correctly with pkg
+			// fs.copyFileSync(source, path);
+			
+			const fileBuffer = fs.readFileSync(source);
+			fs.writeFileSync(path, fileBuffer);
 		} else if (typeof data === 'string') {
 			fs.writeFileSync(path, data);
 		} else {
