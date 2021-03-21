@@ -2,11 +2,24 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 const path = require('path');
 
-let [, , dir, ...args] = process.argv;
-if (!dir) {
-	console.error('enter app name or directory path');
+if (
+	process.argv.length <= 2 ||
+	process.argv.find(arg => /--help|-help|-h/g.test(arg))
+) {
+	console.error(`Syntax:
+	pnpm-cra <app_name> <lang>
+
+	app_name : (REQUIRED) name of app or directory name
+	lang     : (OPTIONAL) ts | --ts | --typescript | typescript
+	
+	app_name directory can exist already
+	default lang = js, no need to specify
+	`);
+
 	process.exit(1);
 }
+
+let [, , dir, ...args] = process.argv;
 
 // =======================================================================================
 
