@@ -4,7 +4,7 @@ const path = require('path');
 
 let [, , dir, ...args] = process.argv;
 if (!dir) {
-	console.error('enter app name / directory path');
+	console.error('enter app name or directory path');
 	process.exit(1);
 }
 
